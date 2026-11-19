@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1b1c1f;
+  --muted: #62666d;
+  --line: #e3e4e8;
+  --card: #f6f7f9;
+  --acc: #d9480f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1013;
+    --fg: #ececee;
+    --muted: #a2a6ae;
+    --line: #2a2c31;
+    --card: #17191d;
+    --acc: #ff8a4c;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 64px; }
+header.top {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 24px;
+}
+header.top .brand { font-weight: 800; color: var(--fg); text-decoration: none; margin-right: auto; }
+header.top a { color: var(--muted); text-decoration: none; font-size: 15px; }
+header.top a[aria-current="page"] { color: var(--acc); }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 19px; margin: 28px 0 6px; }
+p, li { overflow-wrap: anywhere; }
+ul { padding-left: 22px; }
+a { color: var(--acc); }
+.muted { color: var(--muted); }
+.lang { display: flex; gap: 10px; margin: 0 0 20px; }
+.lang a {
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px;
+  text-decoration: none; color: var(--fg); font-size: 15px;
+}
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 18px 0; }
+.card p { margin: 0; }
+.links { display: grid; gap: 10px; margin: 22px 0; padding: 0; list-style: none; }
+.links a {
+  display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px;
+  text-decoration: none; color: var(--fg); background: var(--card);
+}
+.links small { display: block; color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 32px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
